@@ -1,23 +1,23 @@
-//
-//  ViewController.swift
-//  webViews
-//
-//  Created by Riva on 11/09/16.
-//  Copyright © 2016 Riva. All rights reserved.
-//
+ 
 
 import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var meuWebview: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+       
+        let url = NSURL(string:"https://www.google.com.br/")
+        
+         let request = NSURLRequest(URL:url!)
+        
+        meuWebview.loadRequest(request)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+       
     }
 
 
